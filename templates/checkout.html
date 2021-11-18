@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Success!
+{% endblock %}
+{% block content %}
+<h1>Thank you for your Order!
+<br>Your order number: <strong>{{ order_id }}</strong></h1>
+<h2>You've ordered:</h2>
+{% for product in products %}
+<li>{{ product.product_name }}
+    <img src="/shop//{{ product.image }}" alt="{{ product.name }}" width="300">
+</li>
+{% endfor %}
+{% endblock %}

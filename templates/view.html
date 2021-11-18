@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="py-3 bg-primary">
+    <div class="container">
+        <a class="text-white" href="{% url 'index' %}">home</a>
+        <a class="text-white" href="{% url 'cart' product.id %}">{{products.category}}</a>
+        <a class="text-white" href="{% url 'cart' product.id }">{{products.product_name}}</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1>{{products.product_name}}</h1>
+        <div class="row">
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

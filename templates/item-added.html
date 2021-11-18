@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+You've added item to cart!
+{% endblock %}
+{% block content %}
+{% if produc == None %}
+    <h2>You've already had this item in your cart</h2>
+{% else %}
+    <h2>The {{ produc.product_name }} is now in your shopping cart:</h2>
+    <br>
+    <img src="/shop/{{ produc.image }}" alt="{{ produc.product_name }}" width="300">
+    <br><p>{{ produc.disc|linebreaksbr }}</p>
+    <h3>{{ produc.price }} &euro;</h3>
+{% endif %}
+{% endblock %}

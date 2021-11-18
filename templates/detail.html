@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+View detail on product
+{% endblock %}
+{% block content %}
+
+<h2>{{ product.name }}</h2>
+<br>
+<img src="/shop/{{ produc.image }}" alt="{{ produc.product_name }}" width="300">
+<br><p>{{ produc.disc }}</p>
+{% if produc.quantity > 0 %}
+	<label class="badge bg-success">In stock</label>
+{% else %}
+	<label class="badge bg-danger">Out of stock</label>
+{% endif %}
+<div class="row mt-2 product_data">
+	<div class="col-md-3">
+        {% csrf_token %}
+        <input type="hidden" value="{{ product.id}}" class="prod_id">
+		<label for="Quantity">Quantity</label>
+		<div class="input-group text-center mb-3" style="width:130px;">
+            <button class="input-group-text decrement-btn">-</button>
+            <input type="text" name="quantity" class="form-control qty-input text-center" value="1">
+            <button class="input-group-text increment-btn">+</button>
+        </div>
+	</div>
+    <div class="col-md-9">
+        <br/>
+        
+        
+    </div>
+</div>
+<h3>{{ produc.price }} &euro;</h3><button><h2><a href="/item-added/{{ product_id }}">Add to cart</a></h2></button>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Shopping Cart
+{% endblock %}
+
+{% block content %}
+<li>Here is your shopping cart so far</li>
+
+
+{% if products %}
+    {% for product in products %}
+        <li>
+            <a href="{% url 'klog:detail' product.category.id product.id %}">
+                <img src="/shop/{{ product.image }}" alt="{{ product.product_name }}" width="300">
+            </a>
+            <br>
+            <a href="{% url 'klog:detail' product.category.id product.id %}">{{ product.name }}</a>
+           price:
+            <strong>{{ product.price }} &#8377;</strong>
+            -- {{ product.category}}
+           
+            <br>
+            <td>
+                
+                <form action="{% url "klog:cart_add" product.id %}" method="post">
+                    {% csrf_token %}
+                    {{ product.update_quantity_form.quantity }}
+                    {{product.update_quantity_form.update }}
+                    <input type="submit" value="Update" class="btn btn-info">
+                </form>
+            </td>
+            
+            <button class="button" style="vertical-align:middle"><a href="{% url 'klog:cartdelete' product.id %}"><span>Remove item from cart</span></a></button>
+        </li>
+    {% endfor %}
+<h2>Total: {{ total }} &#8377;</h2>
+
+
+<h3>To procceed to checkout </h3>
+<p class="text-left">
+    <a href="{% url 'klog:index' %}" class="btn btn-default">Continue Shopping</a>
+    <a href="{% url 'klog:order_create' %}" class="btn btn-primary">Checkout</a>
+</p>
+
+    
+
+{% else %}
+    You don't have any items yet
+{% endif %}
+<script src="{% "
+
+{% endblock %}
