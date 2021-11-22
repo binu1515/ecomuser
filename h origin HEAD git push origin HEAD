@@ -1,0 +1,23 @@
+[33mcommit ac9c6602cc57b35e96f2e488d593310d873fd713[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Your Name <you@example.com>
+Date:   Mon Nov 22 08:27:45 2021 -0800
+
+    second commit
+
+[33mcommit da6f94437599bff1f7f08ccbbf227b292b6bea6b[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Your Name <you@example.com>
+Date:   Sat Nov 20 10:00:15 2021 -0800
+
+    push
+
+[33mcommit cd86bc79c2bc00c216c1a228d0f7f7af985e09d9[m
+Author: Your Name <you@example.com>
+Date:   Sat Nov 20 09:40:05 2021 -0800
+
+    push
+
+[33mcommit 4e3b392ee4574b44db69c494e9964dd0945384ec[m
+Author: Your Name <you@example.com>
+Date:   Thu Nov 18 09:04:25 2021 -0800
+
+    first commit
