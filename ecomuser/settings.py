@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'ecomuser.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dd1t682eg6hoin',
-        'USER': 'odogbqqzzlelal',
-        'PASSWORD': 'acd3d93753f785de9d92f01ce7d64eeca5111019f79d31b4965d2ad178dd22be',
-        'HOST': 'ec2-34-237-46-61.compute-1.amazonaws.com'
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'ceaser',
+        'HOST': 'localhost'
     }
 }
 
